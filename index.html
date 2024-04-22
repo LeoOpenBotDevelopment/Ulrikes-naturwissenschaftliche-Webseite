@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ulrike's Naturwissenschaft web</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .header{
+      min-height: 100vh;
+      whidth: 100%;
+      background-image: url(Nnnbgc_unw.png);       
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    nav{
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .nav-links{
+      flex: 1;
+      text-align: right;
+    }
+    .nav-links ul li{
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+    .nav-links ul li a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .nav-links ul li::after{
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: green;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    .nav-links ul li:hover::after{
+      width: 100%;
+    }
+    .text-box{
+      width: 90%;
+      color: #fff;
+      position: absolute;
+      top: 73%;
+      left: 17%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+    @media(max-width: 700px){
+      .text-box{
+        margin: 10%;
+      }
+    }
+    .hero-btn{
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      border: 1px solid white;
+      padding: 12px 34px;
+      font-size: 20px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+    }
+    .hero-btn:hover{
+      border: 1px solid green;
+      background: red;
+      transition: 1s;
+    }
+    .GYW h1{
+      font-size: 63px;
+      width: 90%;
+      color: white;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: left;
+    }
+    .GYW2 h1{
+      font-size: 63px;
+      width: 90%;
+      color: #fff;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: left;
+    }
+    nav .menu{
+      display: none;
+    }
+    nav .menu_c{
+      display: none;
+    }
+    @media(max-width: 700px){
+      .GYW h1{
+        font-size: 30px;
+      }
+      .GYW2 h1{
+        font-size: 30px;
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: left;
+      }
+      .header{
+        background-image: url(Nnnbgc_unw.png);  
+      }
+      .text-box{
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        top: 64%;
+        left: 37%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+      }
+      .nav links ul li{
+        display: block;
+      }
+      .nav-links{
+        position: absolute;
+        background: lightgreen;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+      }
+      nav .menu_c{
+        display: block;
+        width: 50px;
+        margin: 10px;
+        padding-top: 10px;
+        padding-left: 340px;
+        cursor: pointer;
+      }
+      nav .menu{
+        display: block;
+        width: 50px;
+        margin: 10px;
+        text-algin: right;
+        padding-top: 10px;
+        cursor: pointer;
+      }
+      .nav-links ul{
+        padding: 30px;
+      }
+    }
+    .HOME{
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1{
+      font-size: 36px;
+      font-weight: 600;
+    }
+    p{
+      color: #777;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      padding: 10px;
+    }
+    .row{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .row1{
+      flex-basis: 55%;
+      background: #cde8b5;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+    .row1:hover{
+      box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+    .row2{
+      flex-basis: 40%;
+      background: #cde8b5;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+    .row2:hover{
+      box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+    .bild{
+      height: 300px;
+    }
+    @media(max-width: 700px){
+      .row{
+        flex-direction: column;
+      }
+      .row1{
+        flex-basis: 100%;
+      }
+      .row2{
+        flex-basis: 100%;
+      }
+      .bild{
+        height: 170px;
+      }
+    }
+    .row11{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .row22{
+      flex-basis: 55%;
+      background: #cde8b5;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      transition: 0.5s;
+    }
+    .row22:hover{
+      box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+    .row33{
+      flex-basis: 40%;
+      background: #cde8b5;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+    .row33:hover{
+      box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+    .bild2{
+      height: 300px;
+    }
+    @media(max-width: 700px){
+      .row11{
+        flex-direction: column;
+      }
+      .row22{
+        flex-basis: 100%;
+      }
+      .row33{
+        flex-basis: 100%;
+      }
+      .bild2{
+        height: 170px;
+      }
+    }
+    .INSTRUCTION{
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .INSTRUCTION-col{
+      height: 200px;
+      flex-basis: 32%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+      background: #cde8b5;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+    .INSTRUCTION-col:hover{
+      box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+    .layer{
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      transition: 0.5s;
+    }
+    .layer:hover{
+      background: rgba(0,0,0,0.4);
+    }
+    .layer h2{
+      width: 100%;
+      font-weight: 500;
+      color: #fff;
+      font-size: 26px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    .layer:hover h2{
+      bottom: 49%;
+      opacity: 1;
+    }
+    .INSTRUCTION2{
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .INSTRUCTION2-col{
+      height: 700px;
+      flex-basis: 40%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .layer2{
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      transition: 0.5s;
+    }
+    .layer2:hover{
+      background: rgba(0,0,0,0.4);
+    }
+    .rowirow{
+      flex-basis: 70%;
+      background: #cde8b5;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      height: 700px;
+      width: 570px;
+      transition: 0.5s;
+    }
+    .rowirow:hover{
+      box-shadow:  0 0 20px 0px rgba(0,0,0,0.2);
+    }
+    @media(max-width: 700px){
+      .INSTRUCTION{
+        display: block;
+      }
+      .INSTRUCTION2{
+        display: none;
+      }
+      .FFC{
+        display: block;
+      }
+    }
+    .Creator{
+      width: 80%;
+      margin: auto;
+      padding-top: 100px;
+      text-align: center;
+    }
+    .creator-col{
+      flex-basis: 44%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      text-align: left;
+      background: lightgreen;
+      padding: 25px;
+      cursor: pointer;
+      display: flex;
+    }
+    .creator-col img{
+      height: 50px;
+      margin-left: 5px;
+      margin-right: 30px;
+      border-radius: 50%;
+    }
+    .menu_c img{
+      border-radius: 10px;
+    }
+    #formal{
+      display: none;
+    }
+    #formal2{
+      display: none;
+    }
+    #formal3{
+      display: none;
+    }
+    #formal4{
+      display: none;
+    }
+    #formal5{
+      display: none;
+    }
+    #formal11{
+      display: none;
+    }
+    #formal22{
+      display: none;
+    }
+    #formal33{
+      display: none;
+    }
+    #formal44{
+      display: none;
+    }
+    #formal55{
+      display: none;
+    }
+    #formal66{
+      display: none;
+    }
+    #formal77{
+      display: none;
+    }
+    #formal88{
+      display: none;
+    }
+    #formal99{
+      display: none;
+    }
+    @media(max-width: 700px){
+      #canvas{
+        width: 400px;
+        height: 360px;
+      }
+    }
+    #pencil-button{
+      background-color: lightgrey;
+      color: black;
+      border: 10px solid white;
+      padding: 5px 5px;
+      border-radius: 30px;
+    }
+    #eraser-button{
+      background-color: lightcyan;
+      color: black;
+      border: 10px solid white;
+      padding: 5px 5px;
+      border-radius: 30px;
+
+    }
+    #clear-button{
+      background-color: lightpink;
+      color: black;
+      border: 10px solid white;
+      padding: 5px 5px;
+      border-radius: 30px;
+    }
+    .WB11{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<section class="header"> 
+  <nav>   
+    <div class="nav-links" id="navlinks">
+      <img src="Nc_fi.png" class="menu" onclick="hidemenu()">
+      <ul>
+        <li><a style="color: black;" href="#Home_1">.HOME      .</a></li>
+        <li><a style="color: black;" class="FFC" href="#Formats">.ÜBUNGEN.</a></li>
+        <li><a style="color: black;" href="#INS_1">.AUFGABEN.</a></li>
+        <li><a style="color: black;" href="#WB">.WHITEBOARD.</a></li>
+      </ul>
+    </div>
+    <img src="Op_fi.png" class="menu_c" onclick="showmenu()">
+  </nav>
+<div class="GYW2">
+  <h1 style="color: green;">NATURWISSENSCHAFT</h1>
+</div>
+<div class="GYW">
+  <h1>
+    <h1>NICHTS BESSERES
+    ALS NATURWISSENSCHAFT MIT ULRIKE
+  </h1>
+
+</div>
+<div class="text-box">
+  <a href="#INS_1" class="hero-btn">Jetzt anfangen</a>
+</div>
+</section>
+<section class="HOME">
+  <h1><a name="Home_1">HOME</a></h1><input type="password" id="passwordv" placeholder="passwort hier"><button onclick="password()">eingeben</button><button onclick="hidefield()">eingabefeld verstecken</button>
+  <div class="row">
+    <div class="row1">
+      <img class="bild" src="Nature_i.png">
+    </div>
+    <div class="row2" style="text-align: left;">
+      <form id="formal">
+        <input type="text" id="text1c" placeholder="um den text zu senden tippe auf 'senden' (nicht auf enter clicken)"> <button onclick="text1change()">senden</button><input type="reset" id="zksn">
+      </form>
+      <p style="text-align: left;" id="text1">hier erscheint dein text sobald du ihn eingibst.</p>
+    </div>
+  </div>
+  <div class="row11">
+    <div class="row33" style="text-align: left;">
+      <form id="formal2">
+        <input type="text" id="text2c" placeholder="um den text zu senden tippe auf 'senden' (nicht auf enter clicken)"> <button onclick="text2change()">senden</button><input type="reset" id="zksn">
+      </form>
+      <p style="text-align: left;" id="text2">Hier kommt dein text hin wenn du ihn dort oben eingibst.</p>
+    </div>
+    <div class="row22">
+      <img class="bild2" src="Nature2_i.jpg">
+    </div>
+  </div>
+</section>
+<section class="INSTRUCTION">
+  <h1><a name="Formats">ÜBUNGEN</a></h1>
+  <div class="row">
+    <form id="formal11">
+      <input type="text" id="ü1a" placeholder="frage"><button id="ü1as" onclick="ü1na()">einfügen</button>
+      <input type="text" id="üa1a" placeholder="antwort"><button id="ü1aas" onclick="ü11na()">einfügen</button>
+    </form>
+    <div class="INSTRUCTION-col">
+      <h1 id="ü1">Frage</h1>
+      <div class="layer">
+        <h2 id="üa1">Antwort</h2>
+      </div>
+    </div>
+    <form id="formal22">
+      <input type="text" id="ü2a" placeholder="frage"><button id="ü2as" onclick="ü2na()">einfügen</button>
+      <input type="text" id="üa2a" placeholder="antwort"><button id="ü2aas" onclick="ü22na()">einfügen</button>
+    </form>
+    <div class="INSTRUCTION-col">
+      <h1 id="ü2">Frage</h1>
+      <div class="layer">
+        <h2 id="üa2">Antwort</h2>
+      </div>
+    </div>
+    <form id="formal33">
+      <input type="text" id="ü3a" placeholder="frage"><button id="ü3as" onclick="ü3na()">einfügen</button>
+      <input type="text" id="üa3a" placeholder="antwort"><button id="ü3aas" onclick="ü33na()">einfügen</button>
+    </form>
+    <div class="INSTRUCTION-col">
+      <h1 id="ü3">Frage</h1>
+      <div class="layer">
+        <h2 id="üa3">Antwort</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="INSTRUCTION">
+    <div class="row">
+      <form id="formal44">
+        <input type="text" id="ü4a" placeholder="frage"><button id="ü4as" onclick="ü4na()">einfügen</button>
+        <input type="text" id="üa4a" placeholder="antwort"><button id="ü4aas" onclick="ü44na()">einfügen</button>
+      </form>
+      <div class="INSTRUCTION-col">
+        <h1 id="ü4">Frage</h1>
+        <div class="layer">
+          <h2 id="üa4">Antwort</h2>
+        </div>
+      </div>
+      <form id="formal55">
+        <input type="text" id="ü5a" placeholder="frage"><button id="ü5as" onclick="ü5na()">einfügen</button>
+        <input type="text" id="üa5a" placeholder="antwort"><button id="ü5aas" onclick="ü55na()">einfügen</button>
+      </form>
+      <div class="INSTRUCTION-col">
+        <h1 id="ü5">Frage</h1>
+        <div class="layer">
+          <h2 id="üa5">Antwort</h2>
+        </div>
+      </div>
+      <form id="formal66">
+        <input type="text" id="ü6a" placeholder="frage"><button id="ü6as" onclick="ü6na()">einfügen</button>
+        <input type="text" id="üa6a" placeholder="antwort"><button id="ü6aas" onclick="ü66na()">einfügen</button>
+      </form>
+      <div class="INSTRUCTION-col">
+        <h1 id="ü6">Frage</h1>
+        <div class="layer">
+          <h2 id="üa6">Antwort</h2>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="INSTRUCTION">
+      <div class="row">
+        <form id="formal77">
+          <input type="text" id="ü7a" placeholder="frage"><button id="ü7as" onclick="ü7na()">einfügen</button>
+          <input type="text" id="üa7a" placeholder="antwort"><button id="ü7aas" onclick="ü77na()">einfügen</button>
+        </form>
+        <div class="INSTRUCTION-col">
+          <h1 id="ü7">Frage</h1>
+          <div class="layer">
+            <h2 id="üa7">Antwort</h2>
+          </div>
+        </div>
+        <form id="formal88">
+          <input type="text" id="ü8a" placeholder="frage"><button id="ü8as" onclick="ü8na()">einfügen</button>
+          <input type="text" id="üa8a" placeholder="antwort"><button id="ü8aas" onclick="ü88na()">einfügen</button>
+        </form>
+        <div class="INSTRUCTION-col">
+          <h1 id="ü8">Frage</h1>
+          <div class="layer">
+            <h2 id="üa8">Antwort</h2>
+          </div>
+        </div>
+        <form id="formal99">
+          <input type="text" id="ü9a" placeholder="frage"><button id="ü9as" onclick="ü9na()">einfügen</button>
+          <input type="text" id="üa9a" placeholder="antwort"><button id="ü9aas" onclick="ü99na()">einfügen</button>
+        </form>
+        <div class="INSTRUCTION-col">
+          <h1 id="ü9">Frage</h1>
+          <div class="layer">
+            <h2 id="üa9">Antwort</h2>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="INSTRUCTION2">
+    <h1 name="Format"></h1>
+    <div class="row">
+      <div class="INSTRUCTION2-col">
+        <img src="Nature_bgc.png" class="i_img">
+        <div class="layer2">
+          <h2></h2>
+        </div>
+      </div>
+      <div class="Ir">
+        <div class="rowirow">
+          <form id="formal3">
+            <input type="text" id="text3c" placeholder="um den text zu senden tippe auf 'senden' (nicht auf enter clicken)"><button onclick="text3change()">senden</button><input type="reset" id="zksn">
+          </form>
+          <h3 style="text-align: left;" id="text3">hier erscheint der text wenn du ihn dort oben eingibst.</h3>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="HOME">
+    <h1><a name="INS_1">AUFGABEN</a></h1>
+    <div class="row">
+      <div class="row1">
+        <img class="bild" src="Nature3_i.jpg">
+      </div>
+      <div class="row2">
+        <form id="formal4">
+          <input type="text" id="text4c" placeholder="um den text zu senden tippe auf 'senden' (nicht auf enter clicken)"><button onclick="text4change()">senden</button><input type="reset" id="zksn">
+        </form>
+        <p style="text-align: left;" id="text4">hier kommt der erste aufgaben text teil hin.</p>
+      </div>
+    </div>
+    <div class="row11">
+      <div class="row33">
+        <form id="formal5">
+          <input type="text" id="text5c" placeholder="um den text zu senden tippe auf 'senden' (nicht auf enter clicken)"><button onclick="text5change()">senden</button><input type="reset" id="zksn">
+        </form>
+        <p id="text5" style="text-align: left;" id="text5">hier kommt der zweite aufgaben text teil hin.</p>
+      </div>
+      <div class="row22">
+        <img class="bild2" src="Plants_fm.jpg">
+      </div>
+    </div>
+</section>
+<a name="WB"><h1 class="WB11">whiteboard</h1></a>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.createElement("div");
+      container.style.padding = "50px 50px 40px 50px";
+      container.id = "container";
+      document.body.appendChild(container);
+
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+
+      canvas.width = 1150;
+      canvas.height = 700;
+      canvas.style.border = "5px solid lightgreen";
+      canvas.style.borderRadius = "10px";
+      canvas.style.cursor = "crosshair";
+      canvas.id = "canvas";
+
+      container.appendChild(canvas);
+
+      let isDrawing = false;
+      let isErasing = false;
+
+      canvas.addEventListener("mousedown", startDrawing);
+      canvas.addEventListener("mouseup", stopDrawing);
+      canvas.addEventListener("mousemove", draw);
+
+      const pencilButton = document.createElement("button");
+      pencilButton.id = "pencil-button";
+      pencilButton.textContent = "Stift";
+      container.appendChild(pencilButton);
+      pencilButton.addEventListener("click", () => {
+        isErasing = false;
+        canvas.style.cursor = "crosshair";
+      });
+
+      const eraserButton = document.createElement("button");
+      eraserButton.id = "eraser-button";
+      eraserButton.textContent = "Radierer";
+      container.appendChild(eraserButton);
+      eraserButton.addEventListener("click", () => {
+        isErasing = true;
+        canvas.style.cursor = "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICA8cGF0aCBkPSJNMiA3LjMzOEwxMiA2LjMzOEwxMiA5LjMzOEwyIDkuMzM4TDEuNzM4IDQuMzM4TDIgNC4zMzhMMCA3LjMzOEwyIDguMzM4TDEyIDcuMzM4TDguMzM4IDQuMzM4TDEyIDguMzM4TDAgNy4zMzh6IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+Cg==') 6 6, auto";
+      });
+
+      const clearButton = document.createElement("button");
+      clearButton.id = "clear-button";
+      clearButton.textContent = "Löschen";
+      container.appendChild(clearButton);
+      clearButton.addEventListener("click", clearCanvas);
+
+      function startDrawing(event) {
+        isDrawing = true;
+        draw(event);
+      }
+
+      function stopDrawing() {
+        isDrawing = false;
+        context.beginPath();
+      }
+
+      function draw(event) {
+        if (!isDrawing) return;
+
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        context.lineWidth = 5;
+        context.lineCap = "round";
+
+        if (!isErasing) {
+          context.strokeStyle = "#000";
+        } else {
+          context.strokeStyle = "#ffffff";
+        }
+
+        context.lineTo(x, y);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(x, y);
+      }
+
+      function clearCanvas() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    });
+  </script>
+
+<script>
+  var navlinks = document.getElementById("navlinks");
+  function showmenu(){
+    navlinks.style.right = "0";
+  }
+  function hidemenu(){
+    navlinks.style.right = "-200px";
+  }
+</script>
+<script>
+  function text4change(){
+    event.preventDefault();
+    const text4 = document.getElementById("text4");
+    const text4c = document.getElementById("text4c");
+    text4.innerHTML = text4c.value;
+  }
+</script>
+<script>
+  function text3change(){
+    event.preventDefault();
+    const text3 = document.getElementById("text3");
+    const text3c = document.getElementById("text3c");
+    text3.innerHTML = text3c.value;
+  }
+</script>
+<script>
+    function text2change(){
+      event.preventDefault();
+      const text2 = document.getElementById("text2");
+      const text2c = document.getElementById("text2c");
+      text2.innerHTML = text2c.value;
+    }
+</script>
+<script>
+    function text1change(){
+      event.preventDefault();
+      const text1 = document.getElementById("text1");
+      const text1c = document.getElementById("text1c");
+      text1.innerHTML = text1c.value;
+    }
+</script>
+<script>
+  function text5change(){
+    event.preventDefault();
+    const text5 = document.getElementById("text5");
+    const text5c = document.getElementById("text5c");
+    text5.innerHTML = text5c.value;
+  }
+</script>
+<script>
+    function password() {
+      event.preventDefault();
+      var passwordInput = document.getElementById("passwordv").value;
+      if (passwordInput == "22u22") {
+        document.getElementById("formal").style.display = "block";
+        document.getElementById("formal2").style.display = "block";
+        document.getElementById("formal3").style.display = "block";
+        document.getElementById("formal4").style.display = "block";
+        document.getElementById("formal5").style.display = "block";
+        document.getElementById("formal11").style.display = "block";
+        document.getElementById("formal22").style.display = "block";
+        document.getElementById("formal33").style.display = "block";
+        document.getElementById("formal44").style.display = "block";
+        document.getElementById("formal55").style.display = "block";
+        document.getElementById("formal66").style.display = "block";
+        document.getElementById("formal77").style.display = "block";
+        document.getElementById("formal88").style.display = "block";
+        document.getElementById("formal99").style.display = "block";
+      }
+    }
+</script>
+<script>
+  function hidefield() {
+    event.preventDefault();
+    document.getElementById("formal").style.display = "none";
+    document.getElementById("formal2").style.display = "none";
+    document.getElementById("formal3").style.display = "none";
+    document.getElementById("formal4").style.display = "none";
+    document.getElementById("formal5").style.display = "none";
+    document.getElementById("formal11").style.display = "none";
+    document.getElementById("formal22").style.display = "none";
+    document.getElementById("formal33").style.display = "none";
+    document.getElementById("formal44").style.display = "none";
+    document.getElementById("formal55").style.display = "none";
+    document.getElementById("formal66").style.display = "none";
+    document.getElementById("formal77").style.display = "none";
+    document.getElementById("formal88").style.display = "none";
+    document.getElementById("formal99").style.display = "none";
+  }
+</script>
+<script>
+  function ü9na(){
+    event.preventDefault();
+    const ü9 = document.getElementById("ü9");
+    const ü9a = document.getElementById("ü9a");
+    ü9.innerHTML = ü9a.value;
+  }
+</script>
+<script>
+    function ü8na(){
+      event.preventDefault();
+      const ü8 = document.getElementById("ü8");
+      const ü8a = document.getElementById("ü8a");
+      ü8.innerHTML = ü8a.value;
+    }
+</script>
+<script>
+  function ü7na(){
+    event.preventDefault();
+    const ü7 = document.getElementById("ü7");
+    const ü7a = document.getElementById("ü7a");
+    ü7.innerHTML = ü7a.value;
+  }
+</script>
+<script>
+    function ü6na(){
+      event.preventDefault();
+      const ü6 = document.getElementById("ü6");
+      const ü6a = document.getElementById("ü6a");
+      ü6.innerHTML = ü6a.value;
+    }
+</script>
+<script>
+  function ü5na(){
+    event.preventDefault();
+    const ü5 = document.getElementById("ü5");
+    const ü5a = document.getElementById("ü5a");
+    ü5.innerHTML = ü5a.value;
+  }
+</script>
+<script>
+    function ü4na(){
+      event.preventDefault();
+      const ü4 = document.getElementById("ü4");
+      const ü4a = document.getElementById("ü4a");
+      ü4.innerHTML = ü4a.value;
+    }
+</script>
+<script>
+  function ü3na(){
+    event.preventDefault();
+    const ü3 = document.getElementById("ü3");
+    const ü3a = document.getElementById("ü3a");
+    ü3.innerHTML = ü3a.value;
+  }
+</script>
+<script>
+  function ü2na(){
+    event.preventDefault();
+    const ü2 = document.getElementById("ü2");
+    const ü2a = document.getElementById("ü2a");
+    ü2.innerHTML = ü2a.value;
+  }
+</script>
+<script>
+  function ü1na(){
+    event.preventDefault();
+    const ü1 = document.getElementById("ü1");
+    const ü1a = document.getElementById("ü1a");
+    ü1.innerHTML = ü1a.value;
+  }
+</script>
+<script>
+  function ü11na(){
+    event.preventDefault();
+    const üa1 = document.getElementById("üa1");
+    const üa1a = document.getElementById("üa1a");
+    üa1.innerHTML = üa1a.value;
+  }
+</script>
+<script>
+  function ü22na(){
+    event.preventDefault();
+    const üa2 = document.getElementById("üa2");
+    const üa2a = document.getElementById("üa2a");
+    üa2.innerHTML = üa2a.value;
+  }
+</script>
+<script>
+  function ü33na(){
+    event.preventDefault();
+    const üa3 = document.getElementById("üa3");
+    const üa3a = document.getElementById("üa3a");
+    üa3.innerHTML = üa3a.value;
+  }
+</script>
+<script>
+  function ü44na(){
+    event.preventDefault();
+    const üa4 = document.getElementById("üa4");
+    const üa4a = document.getElementById("üa4a");
+    üa4.innerHTML = üa4a.value;
+  }
+</script>
+<script>
+  function ü55na(){
+    event.preventDefault();
+    const üa5 = document.getElementById("üa5");
+    const üa5a = document.getElementById("üa5a");
+    üa5.innerHTML = üa5a.value;
+  }
+</script>
+<script>
+  function ü66na(){
+    event.preventDefault();
+    const üa6 = document.getElementById("üa6");
+    const üa6a = document.getElementById("üa6a");
+    üa6.innerHTML = üa6a.value;
+  }
+</script>
+<script>
+  function ü77na(){
+    event.preventDefault();
+    const üa7 = document.getElementById("üa7");
+    const üa7a = document.getElementById("üa7a");
+    üa7.innerHTML = üa7a.value;
+  }
+</script>
+<script>
+  function ü88na(){
+    event.preventDefault();
+    const üa8 = document.getElementById("üa8");
+    const üa8a = document.getElementById("üa8a");
+    üa8.innerHTML = üa8a.value;
+  }
+</script>
+<script>
+  function ü99na(){
+    event.preventDefault();
+    const üa9 = document.getElementById("üa9");
+    const üa9a = document.getElementById("üa9a");
+    üa9.innerHTML = üa9a.value;
+  }
+</script>
+</body>
+</html>
